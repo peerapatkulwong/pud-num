@@ -1,43 +1,25 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
     <head>
         <title>#1</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-    <div class="all">
-        <div class="tran">
-            <input class="input" type="text" id="tran">
+        <div class="aa">
+            <p>ปัดเศษทศนิยม</p>
+            <div class="input-area">
+                <input class="input" type="text" id="number" placeholder="ใส่เลขทศนิยม"><br>
+                <input class="input" type="text" id="dec" placeholder="ต้องการทศนิยมกี่ตำแหน่ง">
+            </div>
+            <div class="output-area">
+                <span class="output"></span>
+            </div>
+            <div class="button-area">
+                <input class="pud" type="submit" id="pud" value="ปัด">
+                <input class="clear" type="reset" id="clear" value="clear">
+            </div>
         </div>
-        <div class="span">
-            <span class="output"></span>
-        </div>
-        <div class="button">
-            <input class="tran_1" type="reset" id="tran_1" value="แปลภาษา">
-            <input class="tran_2" type="reset" id="tran_2" value="clear">
-        </div>
-        <div class="translate" id="translate"></div>
-    </div>
-
-    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-
-    <script>
-    var button = document.getElementById('tran_1');
-    var clear = document.getElementById('tran_2');
-
-    button.addEventListener('click',function(event){
-        var tran = document.getElementById('tran').value;
-        document.querySelector('.output').textContent = tran;
-    });
-
-    function loadGoogleTranslate() {
-    new google.translate.TranslateElement("translate");
-    }
-
-    clear.addEventListener('click',function(event){
-        document.getElementById('tran').value = '';
-        document.querySelector('.output').textContent = '';
-    });
-    </script>
     </body>
+    <script src="process.js">
+    </script>
 </html>
